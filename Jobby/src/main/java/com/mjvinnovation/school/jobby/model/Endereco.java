@@ -15,12 +15,16 @@ public class Endereco {
 
     private Long cep;
 
+    @Column(length = 50)
     private String logradouro;
 
+    @Column(length = 10)
     private String numero;
 
+    @Column(length = 20)
     private String complemento;
 
+    @Column(length = 20)
     private String bairro;
 
 
