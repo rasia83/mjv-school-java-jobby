@@ -8,5 +8,5 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Celular {
     private Long numero;
-    private boolean whatsApp;
+    private boolean whatsapp;
 }
