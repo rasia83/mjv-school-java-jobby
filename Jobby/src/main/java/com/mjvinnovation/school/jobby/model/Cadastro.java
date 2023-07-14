@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -25,11 +26,8 @@ public class Cadastro {
 
     private String email;
 
-    private Long telefone;
-
-    // @OneToOne
-
-    // private Endereco endereco;
+    @OneToOne(cascade = CascadeType.ALL) // confirmar
+    private Endereco endereco;
 
     @Embedded
     private Celular celular;
@@ -39,5 +37,12 @@ public class Cadastro {
 
     @ElementCollection
     private List<String> habilidades;
+
+    @ManyToOne()
+    @JoinColumn(name = "profissao_id")
+    private Profissao profissao;
+
+    @OneToMany(mappedBy="cadastro")
+    private Set<CadastroExperiencia> cadastroExperiencias;
 
 }
