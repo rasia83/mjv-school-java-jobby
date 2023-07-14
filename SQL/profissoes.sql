@@ -92,7 +92,6 @@ VALUES
   ('Desenvolvedor de CSS'),
   ('Desenvolvedor de Shell Script'),
   ('Desenvolvedor de MATLAB'),
-  ('Desenvolvedor de Assembly'),
   ('Desenvolvedor de Lisp'),
   ('Desenvolvedor de Cobol'),
   ('Desenvolvedor de Fortran'),
