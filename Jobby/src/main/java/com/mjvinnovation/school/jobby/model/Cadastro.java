@@ -16,7 +16,6 @@ public class Cadastro {
 
     private String nome;
 
-
     @Column(nullable = false, length = 11)
     private String cpf;
 
@@ -25,7 +24,7 @@ public class Cadastro {
 
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL) // confirmar
+    @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
     @Embedded
