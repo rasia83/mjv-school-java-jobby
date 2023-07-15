@@ -31,7 +31,9 @@ public class CadastroExperiencia {
     @Column(length = 5 )
     private RegimeContratacao regimeContratacao;
 
-    // private Empresa empresa;
+    @ManyToOne()
+    @JoinColumn(name = "empresa_id")
+    private Empresa empresa;
 
     @ManyToOne()
     @JoinColumn(name = "profissao_id")
