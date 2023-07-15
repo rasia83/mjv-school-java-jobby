@@ -9,6 +9,7 @@ CREATE INDEX idx_nome ON profissoes (nome);
 
 INSERT INTO `profissoes` (`nome`)
 VALUES 
+  ('Não Cadastrada'),
   ('Desenvolvedor de Software'),
   ('Engenheiro de Dados'),
   ('Arquiteto de Sistemas'),
