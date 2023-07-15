@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity
@@ -38,11 +37,12 @@ public class Cadastro {
     @ElementCollection
     private List<String> habilidades;
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10 )
+    private Sexo sexo;
+
     @ManyToOne()
     @JoinColumn(name = "profissao_id")
     private Profissao profissao;
-
-    @OneToMany(mappedBy="cadastro")
-    private Set<CadastroExperiencia> cadastroExperiencias;
 
 }
