@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ProfissaoRepository  extends JpaRepository<Profissao, Integer> {
 
-    @Query("SELECT p FROM Profissao p WHERE p.nome LIKE :nome")
+    // @Query("SELECT p FROM Profissao p WHERE p.nome LIKE :nome")
     Profissao findByNome(String nome);
 
 }
