@@ -1,6 +1,8 @@
 package com.mjvinnovation.school.jobby.model;
 
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -35,8 +37,9 @@ public class CadastroExperiencia {
     @JoinColumn(name = "profissao_id")
     private Profissao profissao;
 
-    @ManyToOne
-    @JoinColumn(name="cadastro_id", nullable=false)
+    @ManyToOne(targetEntity = Cadastro.class, fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "cadastro_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Cadastro cadastro;
 
 }
