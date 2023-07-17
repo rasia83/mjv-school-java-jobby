@@ -1,13 +1,11 @@
 package com.mjvinnovation.school.jobby.model;
 
-import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Data
 @Entity
 @Table(name = "cadastro_experiencias")
 public class CadastroExperiencia {

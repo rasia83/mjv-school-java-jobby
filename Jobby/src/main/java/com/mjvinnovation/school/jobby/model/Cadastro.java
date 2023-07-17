@@ -121,9 +121,6 @@ public class Cadastro {
         this.sexo = sexo;
     }
 
-
-
-
 }
 
 

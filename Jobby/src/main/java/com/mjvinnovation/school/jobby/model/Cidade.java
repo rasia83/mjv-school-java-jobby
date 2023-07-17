@@ -1,16 +1,8 @@
 package com.mjvinnovation.school.jobby.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
 
 import javax.persistence.*;
 
-//@Data
-@Getter
-@EqualsAndHashCode
-@ToString
 @Entity
 @Table(name = "cidades")
 public class Cidade {

@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface CadastroRepository extends JpaRepository<Cadastro, Integer> {
 
-    public Optional<Cadastro> findByCadastroContainingIgnoreCase(String cadastro);
+    public Optional<Cadastro> findByCadastroiningIgnoreCase(String cadastro);
 }

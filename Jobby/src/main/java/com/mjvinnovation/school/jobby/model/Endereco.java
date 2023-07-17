@@ -1,10 +1,7 @@
 package com.mjvinnovation.school.jobby.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "enderecos")
 public class Endereco {
