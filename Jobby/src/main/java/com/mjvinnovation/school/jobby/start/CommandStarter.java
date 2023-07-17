@@ -30,6 +30,9 @@ public class CommandStarter implements CommandLineRunner {
     @Autowired
     private ProfissaoRepository profissaoRepository;
 
+    @Autowired
+    private EmpresaRepository empresaRepository;
+
 
 
     @Override
@@ -41,15 +44,20 @@ public class CommandStarter implements CommandLineRunner {
             System.out.println(c.getNomeMunicipio());
         }*/
 
-        Cadastro cadastro = preencherCadastro();
+        //Cadastro cadastro = preencherCadastro();
 
-        cadastroRepository.save(cadastro);
+        //cadastroRepository.save(cadastro);
 
-        CadastroExperiencia cadastroExperiencia = preencherCadastroExperiencia(cadastro);
+        //CadastroExperiencia cadastroExperiencia = preencherCadastroExperiencia(cadastro);
 
-        cadastroExperienciaRepository.save(cadastroExperiencia);
+        //cadastroExperienciaRepository.save(cadastroExperiencia);
 
-        cadastroRepository.deleteById(1);
+        //cadastroRepository.deleteById(2);
+
+        List<Cadastro> cadastros = cadastroRepository.findBySexoAndUf(Sexo.FEMININO, "SP");
+        for (Cadastro c:cadastros) {
+            System.out.println(c.getNome());
+        }
 
     }
 
@@ -116,8 +124,10 @@ public class CommandStarter implements CommandLineRunner {
         cadastroExperiencia.setDataDesligamento(LocalDate.now().minusMonths(3));
         cadastroExperiencia.setRegimeContratacao(RegimeContratacao.CLT);
 
+        Empresa empresa = empresaRepository.findByNomeIgnoreCase("MJV technology & innovation");
+        cadastroExperiencia.setEmpresa(empresa);
         // private Empresa empresa;
-        
+
         Profissao profissao = profissaoRepository.findByNome("Analista de Testes");
         cadastroExperiencia.setProfissao(profissao);
         cadastroExperiencia.setCadastro(cadastro);
