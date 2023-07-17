@@ -1,12 +1,9 @@
 package com.mjvinnovation.school.jobby.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@Data
 @Entity
 @Table(name = "cadastros")
 public class Cadastro {
@@ -44,4 +41,89 @@ public class Cadastro {
     @JoinColumn(name = "profissao_id")
     private Profissao profissao;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Celular getCelular() {
+        return celular;
+    }
+
+    public void setCelular(Celular celular) {
+        this.celular = celular;
+    }
+
+    public PretencaoSalarial getPretencaoSalarial() {
+        return pretencaoSalarial;
+    }
+
+    public void setPretensaoSalarial(PretencaoSalarial pretencaoSalarial) {
+        this.pretencaoSalarial = pretencaoSalarial;
+    }
+
+    public List<String> getHabilidades() {
+        return habilidades;
+    }
+
+    public void setHabilidades(List<String> habilidades) {
+        this.habilidades = habilidades;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+
+
+
 }
+
+

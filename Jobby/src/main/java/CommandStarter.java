@@ -1,5 +1,3 @@
-package com.mjvinnovation.school.jobby.start;
-
 import com.mjvinnovation.school.jobby.model.*;
 import com.mjvinnovation.school.jobby.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
